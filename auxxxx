@@ -1,0 +1,90 @@
+
+    sf::Vector2f pozitie;
+    pozitie.x=forma.getPosition().x;
+    pozitie.y=forma.getPosition().y;
+
+    if (!p1&&p2&&p4)
+        colt_p1.setPosition(pozitie);
+    if (!p3&&p2&&p6)
+        colt_p3.setPosition(pozitie);
+    if (!p9&&p6&&p8)
+        colt_p9.setPosition(pozitie);
+    if (!p7&&p4&&p8)
+        colt_p7.setPosition(pozitie);
+    if (p2&&p6&&p8&&p4)
+        return;
+    if (!p2)
+        fill_sus.setPosition(pozitie);
+    if (!p6)
+        fill_dreapta.setPosition(pozitie);
+    if (!p8)
+        fill_jos.setPosition(pozitie);
+    if (!p4)
+        fill_stanga.setPosition(pozitie);
+
+
+
+
+
+extern sf::RectangleShape colt_p1,colt_p3,colt_p7,colt_p9;
+extern sf::RectangleShape fill_sus,fill_jos,fill_stanga,fill_dreapta;
+
+extern sf::Texture t_colt_p1,t_colt_p3,t_colt_p7,t_colt_p9;
+extern sf::Texture t_fill_sus,t_fill_jos,t_fill_stanga,t_fill_dreapta;
+
+
+
+
+
+    t_colt_p1.loadFromFile("img/bloc/colt_p1.png");
+    t_colt_p3.loadFromFile("img/bloc/colt_p3.png");
+    t_colt_p7.loadFromFile("img/bloc/colt_p7.png");
+    t_colt_p9.loadFromFile("img/bloc/colt_p9.png");
+
+    t_fill_dreapta.loadFromFile("img/bloc/fill_dreapta.png");
+    t_fill_stanga.loadFromFile("img/bloc/fill_stanga.png");
+    t_fill_sus.loadFromFile("img/bloc/fill_sus.png");
+    t_fill_jos.loadFromFile("img/bloc/fill_jos.png");
+
+    colt_p1.setTexture(&t_colt_p1);
+    colt_p3.setTexture(&t_colt_p3);
+    colt_p7.setTexture(&t_colt_p7);
+    colt_p9.setTexture(&t_colt_p9);
+
+
+
+    colt_p1.setSize(sf::Vector2f(30,30));
+    colt_p3.setSize(sf::Vector2f(30,30));
+    colt_p7.setSize(sf::Vector2f(30,30));
+    colt_p9.setSize(sf::Vector2f(30,30));
+    fill_sus.setTexture(&t_fill_sus);
+    fill_jos.setTexture(&t_fill_jos);
+    fill_stanga.setTexture(&t_fill_stanga);
+    fill_dreapta.setTexture(&t_fill_dreapta);
+
+    fill_sus.setSize(sf::Vector2f(30,30));
+    fill_jos.setSize(sf::Vector2f(30,30));
+    fill_stanga.setSize(sf::Vector2f(30,30));
+    fill_dreapta.setSize(sf::Vector2f(30,30));
+
+
+
+
+
+
+    sf::RectangleShape colt_p1,colt_p3,colt_p7,colt_p9;
+sf::RectangleShape fill_sus,fill_jos,fill_stanga,fill_dreapta;
+sf::Texture t_colt_p1,t_colt_p3,t_colt_p7,t_colt_p9;
+sf::Texture t_fill_sus,t_fill_jos,t_fill_stanga,t_fill_dreapta;
+
+
+
+//window.draw(colt_p1);
+            //window.draw(colt_p3);
+            //window.draw(colt_p9);
+            //window.draw(colt_p7);
+            window.draw(fill_stanga);
+            window.draw(fill_dreapta);
+            window.draw(fill_sus);
+            window.draw(fill_jos);
+            reset_colt_fill();
